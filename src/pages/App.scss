@@ -1,0 +1,173 @@
+.button01,
+.button2 {
+  font-family: var(--font-poppins);
+  width: 258px;
+  position: absolute;
+  top: 191px;
+  left: 0;
+  padding: 0.8rem 0rem 0.8rem 0rem;
+}
+.button2 {
+  top: 917px;
+}
+.icon,
+.parkwise {
+  position: absolute;
+  top: 112px;
+  left: calc(50% - 68px);
+}
+.icon {
+  top: 0;
+  left: calc(50% - 63px);
+  width: 126px;
+  height: 126px;
+  object-fit: cover;
+}
+.button01Parent {
+  position: absolute;
+  top: 17px;
+  left: 19px;
+  width: 258px;
+  height: 982px;
+}
+.sideBar {
+  position: relative;
+  background-color: var(--color-gray-100);
+  box-shadow: 2px 0 30px rgba(0, 0, 0, 0.25);
+  min-width: 296px;
+  height: 1024px;
+}
+.carcolored1Icon {
+  position: absolute;
+  top: 52.48px;
+  left: 58px;
+  width: 9rem;
+  height: 19rem;
+  object-fit: cover;
+}
+
+.slot01Child {
+  position: absolute;
+  top: -0.5px;
+  right: -0.5px;
+  border-right: 1px solid var(--color-white);
+  box-sizing: border-box;
+  width: 1px;
+  height: 26.8rem;
+}
+.slot01 {
+  position: relative;
+  box-shadow: 0 0 30px 5px rgba(14, 10, 226, 0.1);
+  width: 17rem;
+  height: 26rem;
+}
+.slot2Child,
+.t {
+  position: absolute;
+}
+.slot2Child {
+  top: -0.5px;
+  right: -1.5px;
+  border-right: 1px solid var(--color-white);
+  box-sizing: border-box;
+  width: 1px;
+  height: 327px;
+}
+.t {
+  top: 10rem;
+  left: calc(50% - 70px);
+  display: inline-block;
+  width: 139px;
+  height: 89.83px;
+  opacity: 0.2;
+}
+.slot01Parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.road {
+  position: absolute;
+  top: calc(50% - 8px);
+  left: calc(61% - 33px);
+  text-transform: uppercase;
+  opacity: 0.2;
+}
+.groupChild,
+.groupItem {
+  position: absolute;
+  top: -0.5px;
+  left: -0.5px;
+  border-top: 1px solid var(--color-white);
+  box-sizing: border-box;
+  width: 70rem;
+  height: 1px;
+}
+.groupItem {
+  top: 139.5px;
+}
+.roadParent,
+.slots {
+  position: absolute;
+  width: 918px;
+}
+.roadParent {
+  top: calc(50% + 91px);
+  left: calc(50% - 459px);
+  height: 140px;
+  font-size: 25px;
+}
+.slots {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  margin: -25px 0 0 -25px;
+  height: 42rem;
+}
+.slotsWrapper {
+  position: relative;
+  width: 100%;
+  height: 1024px;
+  font-size: var(--font-size-57xl);
+  font-family: var(--font-roboto);
+}
+.sideBarParent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.all {
+  position: absolute;
+  top: 35px;
+  left: 11px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  width: 126px;
+}
+
+.view01 {
+  position: relative;
+  background-color: #131821;
+  width: 100%;
+  height: 1024px;
+  overflow: hidden;
+  text-align: left;
+  font-size: 30px;
+  color: var(--color-white);
+  font-family: var(--font-pacifico);
+}
+
+.cs-hide{
+  display: none;
+}
