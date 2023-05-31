@@ -1,14 +1,55 @@
 import './App.scss';
 import { Button } from "react-bootstrap";
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/database';
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB-OvjivTUyKnRJ688UDyxdaW9kg1__Oi8",
+  authDomain: "smart-carpark-7c43f.firebaseapp.com",
+  databaseURL: "https://smart-carpark-7c43f-default-rtdb.firebaseio.com",
+  projectId: "smart-carpark-7c43f",
+  storageBucket: "smart-carpark-7c43f.appspot.com",
+  messagingSenderId: "832551841106",
+  appId: "1:832551841106:web:67fd29b4852e2aba40de8b",
+  measurementId: "G-P71CK340FG"
+};
+
+firebase.initializeApp(firebaseConfig);
+
+
 
 function App() {
 
+  //Toggle Class Function
   const [slot, setSlot] = useState([0, 0, 0, 0]);
 
-  const toggleClass = (id, value) => {
-    setSlot(prevSlot => prevSlot.map((el, index) => index === id ? value : el));
+  const toggleClass = (data) => {
+    const output = Object.keys(data).map((x) => {
+      return data[x].availability;
+    })
+
+    setSlot(output);
   };
+
+  //Firebase Function
+
+  useEffect(() => {
+    const fetchData = () => {
+      const dbRef = firebase.database().ref('/slots');
+      dbRef.on('value', (snapshot) => {
+        toggleClass(snapshot.val());
+      });
+    };
+
+    fetchData();
+
+    // Clean up the event listener on unmount
+    return () => {
+      const dbRef = firebase.database().ref('/slots');
+      dbRef.off();
+    };
+  }, []);
 
   return (
     <div className="view01">
